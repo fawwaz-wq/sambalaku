@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keranjang Belanja — Sambalaku</title>
+  <meta name="description" content="Periksa sambal pilihanmu, atur jumlah, dan isi data pengiriman. Gratis ongkir untuk pesanan min. Rp 150.000.">
+  <meta name="theme-color" content="#b3261e">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon-sambal.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="keranjang">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <div class="topbar" role="region" aria-label="Informasi toko">
+    <div class="container topbar-inner">
+      <span>Gratis ongkir min. Rp 150.000</span>
+      <span class="topbar-dot" aria-hidden="true">•</span>
+      <span>Dimasak tiap minggu, tanpa pengawet</span>
+      <span class="topbar-dot topbar-long" aria-hidden="true">•</span>
+      <span class="topbar-long">Dikirim dari Yogyakarta ke seluruh Indonesia</span>
+    </div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sambalaku — beranda">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" focusable="false">
+            <path d="M16 37c0-6 6-9 10-6 6 4 13 2 18-3 6-6 9-14 8-22 6 3 9 9 9 16 0 15-13 29-29 29-9 0-16-6-16-14Z" fill="#fff1dc"/>
+            <path d="M52 8c4 2 7 6 8 11-4-4-9-6-14-6 1-2 3-4 6-5Z" fill="#9ab884"/>
+          </svg>
+        </span>
+        <span class="brand-text">Sambalaku<small>dapur nusantara</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="produk.html">Produk</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="cart-link" href="keranjang.html" aria-label="Keranjang belanja, kosong">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M5.5 8h13l-1.2 12H6.7L5.5 8Z"/>
+            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span class="cart-count" data-cart-count aria-hidden="true" hidden>0</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="Buka menu navigasi">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- JUDUL HALAMAN -->
+    <section class="page-hero" aria-labelledby="judul-keranjang">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <a href="produk.html">Produk</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span aria-current="page">Keranjang</span>
+        </nav>
+        <p class="eyebrow">Hampir sampai</p>
+        <h1 id="judul-keranjang">Keranjang belanjamu.</h1>
+        <p class="lead">Periksa jumlah sambal, lalu isi data pengiriman. Pesanan akan dikonfirmasi lewat WhatsApp sebelum dikirim.</p>
+      </div>
+    </section>
+
+    <section class="cart-page" aria-label="Isi keranjang dan checkout">
+      <div class="container">
+        <!-- Keranjang terisi (ditampilkan oleh script.js) -->
+        <div class="cart-layout" data-cart-layout hidden>
+          <section class="cart-panel" aria-labelledby="judul-produk-keranjang">
+            <div class="cart-panel-head">
+              <h2 id="judul-produk-keranjang">Produk</h2>
+              <span data-cart-count-label>0 item</span>
+            </div>
+            <div data-cart-items></div>
+          </section>
+
+          <section class="cart-summary" aria-labelledby="judul-ringkasan">
+            <h2 id="judul-ringkasan">Ringkasan pesanan</h2>
+
+            <div class="shipping-meter">
+              <p data-meter-text>Tambah <strong>Rp 150.000</strong> lagi untuk gratis ongkir.</p>
+              <div class="meter" role="progressbar" aria-label="Progres gratis ongkir" aria-valuemin="0" aria-valuemax="150000" aria-valuenow="0">
+                <div class="meter-bar" data-meter-bar></div>
+              </div>
+            </div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span data-summary-subtotal>Rp 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Ongkir</span>
+              <span data-summary-shipping>Rp 0</span>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <strong data-summary-total>Rp 0</strong>
+            </div>
+
+            <a class="btn btn-primary btn-block" href="#checkout">
+              Lanjut ke pengiriman
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <p class="summary-note">Ongkir otomatis. Gratis untuk pesanan minimal Rp 150.000.</p>
+            <p class="trust-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              Tanpa pembayaran otomatis · konfirmasi via WhatsApp
+            </p>
+          </section>
+        </div>
+
+        <!-- Keranjang kosong -->
+        <div class="cart-empty" data-cart-empty hidden>
+          <span class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M5.5 8h13l-1.2 12H6.7L5.5 8Z"/>
+              <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+              <path d="M9.5 13.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/>
+            </svg>
+          </span>
+          <h2>Keranjangmu masih kosong.</h2>
+          <p>Belum ada sambal yang dipilih. Yuk, mulai dari varian yang paling dicari—atau tanya kami kalau bingung.</p>
+          <div class="success-actions">
+            <a class="btn btn-primary" href="produk.html">Pilih Sambal</a>
+            <a class="btn btn-outline" href="#" data-wa>Tanya via WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- FORM CHECKOUT (tampil jika keranjang berisi) -->
+        <div class="checkout" id="checkout" data-checkout hidden>
+          <h2>Data pengiriman</h2>
+          <p>Isi data dengan lengkap. Kami akan menghubungi nomor WhatsApp-mu untuk mengonfirmasi pesanan dan ongkir akhir.</p>
+
+          <form class="checkout-form" data-checkout-form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="nama">Nama lengkap</label>
+                <input id="nama" name="nama" type="text" autocomplete="name" placeholder="Contoh: Sari Wulandari" required>
+              </div>
+              <div class="field">
+                <label for="telepon">Nomor WhatsApp</label>
+                <input id="telepon" name="telepon" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+\-\s()]{8,20}" placeholder="08xx xxxx xxxx" required>
+                <span class="field-hint">Aktif dan bisa menerima pesan WhatsApp.</span>
+              </div>
+              <div class="field field--full">
+                <label for="kota">Kota / kabupaten</label>
+                <input id="kota" name="kota" type="text" autocomplete="address-level2" placeholder="Contoh: Sleman, Yogyakarta" required>
+              </div>
+              <div class="field field--full">
+                <label for="alamat">Alamat lengkap</label>
+                <textarea id="alamat" name="alamat" autocomplete="street-address" placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, kecamatan, kode pos" required></textarea>
+              </div>
+              <div class="field field--full">
+                <label for="catatan">Catatan untuk penjual <span class="optional">(opsional)</span></label>
+                <textarea id="catatan" name="catatan" placeholder="Contoh: tolong dikirim setelah tanggal 20, atau minta level pedas ekstra."></textarea>
+              </div>
+              <div class="field field--full">
+                <p class="field-label">Metode pembayaran</p>
+                <div class="radio-group" role="radiogroup" aria-label="Metode pembayaran">
+                  <label class="radio-card">
+                    <input type="radio" name="pembayaran" value="transfer" checked required>
+                    Transfer bank
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="pembayaran" value="qris">
+                    QRIS
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="pembayaran" value="cod">
+                    Bayar di tempat (COD)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-actions">
+              <button class="btn btn-primary" type="submit">
+                Buat Pesanan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="demo-note">Situs demo: pesanan tidak dikirim ke mana pun dan tidak ada pembayaran yang diproses. Data yang diisi hanya tersimpan di halaman ini.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- KONFIRMASI PESANAN (simulasi) -->
+        <div class="checkout-success" data-checkout-success role="status" aria-live="polite">
+          <span class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m5 12 4.5 4.5L19 7"/></svg>
+          </span>
+          <h2>Pesanan diterima, <span data-order-name>Kak</span>!</h2>
+          <p>Terima kasih sudah memilih Sambalaku. Kami akan menghubungi kamu lewat WhatsApp untuk konfirmasi pembayaran, ongkir akhir, dan jadwal kirim.</p>
+          <div class="order-box">
+            <span>Kode pesanan</span>
+            <strong data-order-code>SBK-000000</strong>
+            <span>Total pesanan</span>
+            <strong data-order-total>Rp 0</strong>
+          </div>
+          <div class="success-actions">
+            <a class="btn btn-primary" href="produk.html">Belanja Lagi</a>
+            <a class="btn btn-outline" href="#" data-wa data-wa-pesan="Halo Sambalaku! Saya baru membuat pesanan di website. Berikut kode pesanan saya: ">Konfirmasi via WhatsApp</a>
+          </div>
+          <p class="summary-note">Ini konfirmasi simulasi untuk situs statis. Tidak ada transaksi nyata yang terjadi.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Sambalaku — beranda">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <path d="M16 37c0-6 6-9 10-6 6 4 13 2 18-3 6-6 9-14 8-22 6 3 9 9 9 16 0 15-13 29-29 29-9 0-16-6-16-14Z" fill="#fff1dc"/>
+                <path d="M52 8c4 2 7 6 8 11-4-4-9-6-14-6 1-2 3-4 6-5Z" fill="#9ab884"/>
+              </svg>
+            </span>
+            <span class="brand-text">Sambalaku<small>dapur nusantara</small></span>
+          </a>
+          <p>Sambal tradisional rumahan dari Yogyakarta. Dimasak kecil-kecilan, dengan cabai segar dan resep yang tidak disingkat.</p>
+          <div class="socials" aria-label="Media sosial Sambalaku">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram Sambalaku">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok Sambalaku">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 4v10a4.5 4.5 0 1 1-4.5-4.5"/><path d="M15 4c.5 2.6 2.1 4.2 4.5 4.6"/></svg>
+            </a>
+            <a href="#" data-wa aria-label="WhatsApp Sambalaku">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.2-.5.5-.6.9-.6h.6l.8 1.9-.7.9c.5 1 1.4 1.9 2.4 2.4l.9-.7 1.9.8v.6c0 .4-.2.7-.6.9-.5.3-1.2.4-1.9.2-2-.5-4.4-2.9-5-5-.2-.6-.1-1.1.2-1.4Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h2>Jelajahi</h2>
+          <div class="footer-links">
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="produk.html">Semua Produk</a>
+            <a href="keranjang.html">Keranjang</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h2>Bantuan</h2>
+          <div class="footer-links">
+            <a href="faq.html">Pertanyaan Umum</a>
+            <a href="faq.html#pengiriman">Pengiriman</a>
+            <a href="faq.html#penyimpanan">Cara Menyimpan</a>
+            <a href="keranjang.html#checkout">Cara Pesan</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h2>Hubungi Kami</h2>
+          <div class="footer-links">
+            <p>Jl. Kaliurang No. 12, Sleman, Yogyakarta</p>
+            <a href="#" data-wa>WhatsApp: 0812-3456-7890</a>
+            <a href="#" data-email>halo@sambalaku.id</a>
+            <p>Senin–Sabtu, 08.00–17.00 WIB</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Sambalaku. Dibuat dengan cabai dan kesabaran.</p>
+        <p><a href="faq.html">Bantuan</a> · <a href="faq.html#pengiriman">Pengiriman</a> · <a href="produk.html">Belanja</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
