@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="judul-favicon">
+  <title id="judul-favicon">Sambalaku</title>
+  <rect width="64" height="64" rx="16" fill="#b3261e"/>
+  <path d="M16 37c0-6 6-9 10-6 6 4 13 2 18-3 6-6 9-14 8-22 6 3 9 9 9 16 0 15-13 29-29 29-9 0-16-6-16-14Z" fill="#fff1dc"/>
+  <path d="M52 8c4 2 7 6 8 11-4-4-9-6-14-6 1-2 3-4 6-5Z" fill="#7fa36a"/>
+</svg>

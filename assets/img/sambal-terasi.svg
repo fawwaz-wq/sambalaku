@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="judul-sambal-terasi">
+  <title id="judul-sambal-terasi">Ilustrasi Sambal Terasi Bakar</title>
+  <defs>
+    <linearGradient id="bg-sambal-terasi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#ecd4ba"/>
+    </linearGradient>
+    <linearGradient id="jar-sambal-terasi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#efe1cd"/>
+    </linearGradient>
+    <linearGradient id="isi-sambal-terasi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9653f"/>
+      <stop offset="1" stop-color="#582011"/>
+    </linearGradient>
+    <linearGradient id="tutup-sambal-terasi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a241d"/>
+      <stop offset=".5" stop-color="#6b4434"/>
+      <stop offset="1" stop-color="#3a241d"/>
+    </linearGradient>
+    <filter id="bayang-sambal-terasi" x="-40%" y="-40%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#3d1f17" flood-opacity=".22"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg-sambal-terasi)"/>
+  <circle cx="660" cy="145" r="168" fill="#8e3b22" opacity=".12"/>
+  <circle cx="112" cy="686" r="180" fill="#ffffff" opacity=".34"/>
+  <path d="M0 626c134-62 292-72 424-34 132 38 258 50 376 6v202H0Z" fill="#8e3b22" opacity=".07"/>
+
+  <!-- Daun dan cabai di latar -->
+  <g transform="translate(622 214) rotate(24)" opacity=".85">
+    <path d="M0 34C36 6 86-2 128 10c-30 30-74 44-128 24Z" fill="#3f5b43"/>
+    <path d="M14 32C52 16 88 12 116 16" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(150 262) rotate(-26)" opacity=".9">
+    <path d="M9 36c42 7 77-6 101-36 6-7 16-6 19 2 4 12-15 33-36 46-23 14-53 19-78 11-8-3-13-12-6-23Z" fill="#8e3b22"/>
+    <path d="M114-2c8-8 20-8 28 0s8 20 0 28" fill="none" stroke="#3f5b43" stroke-width="9" stroke-linecap="round"/>
+  </g>
+
+  <!-- Toples sambal -->
+  <g filter="url(#bayang-sambal-terasi)">
+    <rect x="250" y="300" width="300" height="340" rx="42" fill="url(#jar-sambal-terasi)"/>
+    <path d="M268 468h264v130c0 23-19 42-42 42H310c-23 0-42-19-42-42Z" fill="url(#isi-sambal-terasi)"/>
+    <g fill="#b9653f" opacity=".6">
+      <circle cx="330" cy="526" r="7"/><circle cx="392" cy="582" r="5"/>
+      <circle cx="476" cy="536" r="6"/><circle cx="502" cy="600" r="4"/>
+      <circle cx="356" cy="614" r="4"/><circle cx="438" cy="558" r="3"/>
+    </g>
+    <rect x="272" y="322" width="48" height="236" rx="24" fill="#ffffff" opacity=".4"/>
+    <rect x="238" y="254" width="324" height="88" rx="26" fill="url(#tutup-sambal-terasi)"/>
+    <rect x="260" y="274" width="280" height="16" rx="8" fill="#ffffff" opacity=".16"/>
+    <rect x="292" y="412" width="216" height="154" rx="12" fill="#fffaf0" stroke="#8e3b22" stroke-opacity=".3" stroke-width="2"/>
+    <text x="400" y="445" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="5" fill="#582011">SAMBALAKU</text>
+    <text x="400" y="483" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#2b1a16">Sambal</text>
+    <text x="400" y="513" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#2b1a16">Terasi Bakar</text>
+    <line x1="330" y1="530" x2="470" y2="530" stroke="#8e3b22" stroke-width="1.5" opacity=".45"/>
+    <text x="400" y="550" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="2.5" fill="#7a665b">PEDAS 4/5 &#183; 180 G</text>
+  </g>
+
+  <!-- Cabai di depan -->
+  <g transform="translate(74 584) rotate(-16)">
+    <path d="M10 40c45 8 82-6 108-38 6-7 16-6 19 2 4 12-16 34-38 48-24 15-56 20-83 12-8-3-13-12-6-24Z" fill="#8e3b22"/>
+    <path d="M124 0c8-8 20-8 28 0s8 20 0 28" fill="none" stroke="#3f5b43" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(596 636) rotate(22)">
+    <path d="M10 40c45 8 82-6 108-38 6-7 16-6 19 2 4 12-16 34-38 48-24 15-56 20-83 12-8-3-13-12-6-24Z" fill="#8e3b22"/>
+    <path d="M124 0c8-8 20-8 28 0s8 20 0 28" fill="none" stroke="#3f5b43" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(636 700) rotate(-8)" opacity=".9">
+    <path d="M0 34C36 6 86-2 128 10c-30 30-74 44-128 24Z" fill="#3f5b43"/>
+  </g>
+</svg>
